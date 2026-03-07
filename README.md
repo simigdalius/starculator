@@ -29,16 +29,10 @@
 ### Τρόπος 2: Εκτέλεση από τον πηγαίο κώδικα (Για Developers & Mac/Linux)
 Βεβαιωθείτε ότι έχετε εγκατεστημένη την **Python 3.x** στο σύστημά σας. Επίσης, η εφαρμογή χρησιμοποιεί τη βιβλιοθήκη `numpy`. 
 1. Κάντε clone το repository στον υπολογιστή σας:
-   ```bash
-   git clone [https://github.com/simidalius/starcalator.git](https://github.com/simigdalius/starcalator.git)
-Μεταβείτε στον φάκελο του project:
-
-Bash
-cd starcalator
-Τρέξτε την εφαρμογή:
-
-Bash
-
-Μπορείτε να την εγκαταστήσετε τρέχοντας:
-```bash
-pip install numpy
+   ```bash git clone [https://github.com/simidalius/starcalator.git](https://github.com/simigdalius/starcalator.git)
+2.Μεταβείτε στον φάκελο του project:
+   ```bash cd starcalator
+3.Τρέξτε την εφαρμογή:
+   ```bash python starculator.py
+4.Εγκατάσταση βιβλιοθήκης numpy:
+   ```bash pip install numpy
