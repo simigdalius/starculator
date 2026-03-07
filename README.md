@@ -1,5 +1,5 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
-![numpy](https://img.shields.io/badge/Pygame-Library-green?style=for-the-badge)
+![NumPy](https://img.shields.io/badge/NumPy-Library-blue?style=for-the-badge)
 # 🌟 STARCALATOR 
 
 Μια διαδραστική εφαρμογή τερματικού (CLI) γραμμένη σε Python, σχεδιασμένη για να βοηθάει φοιτητές και λάτρεις της αστρονομίας και της αστροφυσικής με βασικούς τύπους και υπολογισμούς.
