@@ -1,6 +1,8 @@
 import numpy as np
 import time
 import sys
+import os  
+os.system("color")
 
 # Ορισμός χρωμάτων (έξω από τις συναρτήσεις για να είναι καθολικά)
 CYAN = '\033[96m'
@@ -219,3 +221,4 @@ def feugw():
 
 if __name__ == "__main__":
     main()
+
