@@ -57,14 +57,17 @@ def kefalaia():
     print(f"\n{CYAN}{'='*40}{END}")
     print(f"{CYAN}{BOLD}          ✨ Επελεξε κεφαλαιο ✨          {END}")
     print(f"{CYAN}{'='*40}{END}")
+    print(f" {YELLOW}[0]{END} {CYAN}{'Μετατροπές':<34}{END}")
     print(f" {YELLOW}[2]{END} {CYAN}{'Ακτινοβολία':<34}{END}")
-    print(f"{BOLD}Για επιλογη τυπου πατα 1-6: {END}")
+    print(f"{BOLD}Για επιλογη κεφαλαίου πατήστε 0-6: {END}")
     print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp == 2:
         tupologiok2()
     elif inp == 7:
         main()
+    elif inp == 0:
+        metatropes()
 
 def info():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -224,6 +227,53 @@ def piknotita():
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
     tupologiok2() 
 
+def metatropes():
+    print(f"\n{GREEN}{'='*68}{END}")
+    print(f"{GREEN}{BOLD}                     🔭 ΜΕΤΑΤΡΟΠΕΣ 🔭                     {END}")
+    print(f"{GREEN}{'='*68}{END}\n")
+    print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπές από Παρσέκ (pc)':<34}{END} ")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπές από Έτη Φωτός (l.y.)':<34}{END} ")
+    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπές από Αστρονιμικές Μονάδες (A.U.)':<34}{END} ")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-6: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
+    inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    if inp==1:
+        pc()
+    elif inp==2:
+        Wien()
+    elif inp==3:
+        fwtinotita()
+    elif inp ==7:
+        main()
+
+def pc():
+    pctimh = get_safe_float(f"{BOLD}Δώσε την απόσταση (σε Παρσέκ): {END}")
+    print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπή σε m':<34}{END} ")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπή σε A.U.':<34}{END} ")
+    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπή σε l.y.':<34}{END} ")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-3: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [4]: {END}")
+    inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    if inp==1:
+        pctimh = pctimh * 3.086 * (10**16)
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}pc σε m = {pctimh:.2e} m{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==2:
+        pctimh = pctimh * 206265
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}pc σε A.U. = {pctimh:.2e} A.U.{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==3:
+        pctimh = pctimh * 3.26
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}pc σε l.y. = {pctimh:.2e} l.y.{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp ==4:
+        main()
 
 
 def feugw():
