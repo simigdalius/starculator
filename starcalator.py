@@ -1,9 +1,10 @@
 import numpy as np
 import time
 import sys
-import os  
-os.system("color")
+import os  # <--- ΠΡΟΣΘΕΣΕ ΑΥΤΟ
 
+# Αυτή η γραμμή "ξυπνάει" το terminal των Windows για να δείχνει χρώματα!
+os.system("color")
 # Ορισμός χρωμάτων (έξω από τις συναρτήσεις για να είναι καθολικά)
 CYAN = '\033[96m'
 YELLOW = '\033[93m'
@@ -44,12 +45,25 @@ def main():
     if inp == 0:
         info()
     elif inp == 1:
-        tupologio()
+        kefalaia()
     elif inp == 2:
         feugw()
     else:
         print(f"{RED}Λάθος επιλογή, προσπάθησε ξανά.{END}")
         time.sleep(1)
+        main()
+
+def kefalaia():
+    print(f"\n{CYAN}{'='*40}{END}")
+    print(f"{CYAN}{BOLD}          ✨ Επελεξε κεφαλαιο ✨          {END}")
+    print(f"{CYAN}{'='*40}{END}")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Ακτινοβολία':<34}{END}")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-6: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
+    inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    if inp == 2:
+        tupologiok2()
+    elif inp == 7:
         main()
 
 def info():
@@ -77,7 +91,7 @@ def info():
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
     main()
 
-def tupologio():
+def tupologiok2():
     print(f"\n{GREEN}{'='*68}{END}")
     print(f"{GREEN}{BOLD}                     🔭 ΤΥΠΟΛΟΓΙΟ 🔭                     {END}")
     print(f"{GREEN}{'='*68}{END}\n")
@@ -121,8 +135,7 @@ def StefanBoltzman():
     print(f"{BOLD}Ροή Ακτινοβολίας (F) = {f:.2e} W/m²{END}") 
     print(f"\n{CYAN}{'-'*50}{END}")
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
-
+    tupologiok2()
 
 def Wien():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -140,7 +153,7 @@ def Wien():
 
     print(f"\n{GREEN}{'-'*68}{END}")  
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
+    tupologiok2() 
 
 def fwtinotita():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -156,7 +169,7 @@ def fwtinotita():
     print(f"{BOLD}Φωτεινότητα (L) = {lum:.2e} W{END}")
     print(f"\n{GREEN}{'-'*68}{END}") 
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
+    tupologiok2() 
 
 def lamprotita():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -174,7 +187,7 @@ def lamprotita():
 
     print(f"\n{GREEN}{'-'*68}{END}")             
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
+    tupologiok2() 
 
 def aktinobolia():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -191,7 +204,7 @@ def aktinobolia():
     print(f"{BOLD}Πίεση Ακτινοβολίας (P_rad) = {p_rad:.2e} Pa (N/m²){END}")
     print(f"\n{GREEN}{'-'*68}{END}")
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
+    tupologiok2() 
 
 def piknotita():
     print(f"\n{GREEN}{'='*68}{END}")
@@ -209,7 +222,7 @@ def piknotita():
 
     print(f"\n{GREEN}{'-'*68}{END}")
     input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
-    tupologio() 
+    tupologiok2() 
 
 
 
@@ -221,4 +234,3 @@ def feugw():
 
 if __name__ == "__main__":
     main()
-
