@@ -1,8 +1,8 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-Library-blue?style=for-the-badge)
-# 🌟 STARCALATOR 
+# 🌟 STARCULATOR 
 
-Μια διαδραστική εφαρμογή τερματικού (CLI) γραμμένη σε Python, σχεδιασμένη για να βοηθάει φοιτητές και ερασιτέχνες της αστρονομίας και της αστροφυσικής με βασικούς τύπους και υπολογισμούς.
+Μια διαδραστική εφαρμογή τερματικού γραμμένη σε Python, σχεδιασμένη για να βοηθάει φοιτητές και ερασιτέχνες της αστρονομίας και της αστροφυσικής με βασικούς τύπους και υπολογισμούς.
 
 ##  Χαρακτηριστικά
 - **Φιλικό UI στο Terminal:** Χρήση ANSI escape sequences για καθαρό, χρωματιστό και ευανάγνωστο μενού πλοήγησης.
