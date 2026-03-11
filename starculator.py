@@ -41,6 +41,9 @@ def main():
     print(f"{CYAN}{'-'*40}{END}")
     
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>2:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 0-2.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     
     if inp == 0:
         info()
@@ -61,13 +64,16 @@ def kefalaia():
     print(f" {YELLOW}[1]{END} {CYAN}{'Ουρανια σφαίρα':<34}{END}")
     print(f" {YELLOW}[2]{END} {CYAN}{'Ακτινοβολία':<34}{END}")
     print(f"{BOLD}Για επιλογη κεφαλαίου πατήστε 0-6: {END}")
-    print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [3]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>3:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 0-3.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp == 2:
         tupologiok2()
     elif inp == 0:
         metatropes()
-    elif inp == 7:
+    elif inp == 3:
         main()
     elif inp == 1:
         ourania()
@@ -82,9 +88,12 @@ def ourania():
     print(f"{BOLD}Για επιλογη τυπου πατα 1-4: {END}")
     print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>2:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-2.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp==1:
         star_tracker()
-    elif inp==7:
+    elif inp==2:
         main()
         
 def star_tracker():
@@ -170,6 +179,9 @@ def tupologiok2():
     print(f"{BOLD}Για επιλογη τυπου πατα 1-6: {END}")
     print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>7:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-7.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp==1:
         StefanBoltzman()
     elif inp==2:
@@ -296,49 +308,155 @@ def metatropes():
     print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπές από Παρσέκ (pc)':<34}{END} ")
     print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπές από Έτη Φωτός (l.y.)':<34}{END} ")
     print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπές από Αστρονιμικές Μονάδες (A.U.)':<34}{END} ")
-    print(f"{BOLD}Για επιλογη τυπου πατα 1-6: {END}")
-    print(f"{RED}{BOLD}Για επιστροφή πατήστε [7]: {END}")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-3: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [4]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>4:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-4.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp==1:
         pc()
     elif inp==2:
-        Wien()
+        lightyears()
     elif inp==3:
-        fwtinotita()
-    elif inp ==7:
+        astronomicalunits()
+    elif inp ==4:
         main()
 
 def pc():
     pctimh = get_safe_float(f"{BOLD}Δώσε την απόσταση (σε Παρσέκ): {END}")
     print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπή σε m':<34}{END} ")
-    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπή σε A.U.':<34}{END} ")
-    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπή σε l.y.':<34}{END} ")
-    print(f"{BOLD}Για επιλογη τυπου πατα 1-3: {END}")
-    print(f"{RED}{BOLD}Για επιστροφή πατήστε [4]: {END}")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπή σε km':<34}{END} ")
+    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπή σε A.U.':<34}{END} ")
+    print(f" {YELLOW}[4]{END} {CYAN}{'Μετατροπή σε l.y.':<34}{END} ")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-4: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [5]: {END}")
     inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>5:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-5.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
     if inp==1:
         pctimh = pctimh * 3.086 * (10**16)
         print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
-        print(f"{BOLD}pc σε m = {pctimh:.2e} m{END}")
+        print(f"{BOLD}pc σε m = {pctimh:.4e} m{END}")
         input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
         metatropes()
     elif inp==2:
-        pctimh = pctimh * 206265
+        pctimh = pctimh * 3.086 * (10^13)
         print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
-        print(f"{BOLD}pc σε A.U. = {pctimh:.2e} A.U.{END}")
+        print(f"{BOLD}pc σε km = {pctimh:.4e} km {END}")
         input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
         metatropes()
     elif inp==3:
-        pctimh = pctimh * 3.26
+        pctimh = pctimh * 206265
         print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
-        print(f"{BOLD}pc σε l.y. = {pctimh:.2e} l.y.{END}")
+        print(f"{BOLD}pc σε A.U. = {pctimh:.4e} A.U.{END}")
         input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
         metatropes()
-    elif inp ==4:
+    elif inp==4:
+        pctimh = pctimh * 3.26
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}pc σε l.y. = {pctimh:.4e} l.y.{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp ==5:
         main()
 
+
+
+def lightyears():
+    lytimh = get_safe_float(f"{BOLD}Δώσε την απόσταση (σε έτη φωτός): {END}")
+    print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπή σε m':<34}{END} ")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπή σε km':<34}{END} ")
+    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπή σε A.U.':<34}{END} ")
+    print(f" {YELLOW}[4]{END} {CYAN}{'Μετατροπή σε pc':<34}{END} ")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-4: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [5]: {END}")
+    inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>5:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-5.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    if inp==1:
+        lytimh = lytimh * 9.46 * (10^15)
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}l.y. σε m = {lytimh:.4e} m{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==2:
+        lytimh = lytimh * 39.46 * (10^12)
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}l.y. σε km = {lytimh:.4e} km {END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==3:
+        lytimh = lytimh * 63241
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}l.y. σε A.U. = {lytimh:.4e} A.U.{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==4:
+        lytimh = lytimh * 0.30675
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}l.y. σε pc = {lytimh:.4e} pc{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp ==5:
+        main()
+
+
+
+def astronomicalunits():
+    AUtimh = get_safe_float(f"{BOLD}Δώσε την απόσταση (σε αστρονιμικές μονάδες): {END}")
+    print(f" {YELLOW}[1]{END} {CYAN}{'Μετατροπή σε m':<34}{END} ")
+    print(f" {YELLOW}[2]{END} {CYAN}{'Μετατροπή σε km':<34}{END} ")
+    print(f" {YELLOW}[3]{END} {CYAN}{'Μετατροπή σε l.y.':<34}{END} ")
+    print(f" {YELLOW}[4]{END} {CYAN}{'Μετατροπή σε pc':<34}{END} ")
+    print(f"{BOLD}Για επιλογη τυπου πατα 1-4: {END}")
+    print(f"{RED}{BOLD}Για επιστροφή πατήστε [5]: {END}")
+    inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    while inp>5:
+        print(f"{RED}{BOLD}η επιλογη σου ειναι μη εγκυρη διαλεξε μεταξυ 1-5.: {END}")
+        inp = get_safe_int(f"{BOLD}Επιλογή: {END}")
+    if inp==1:
+        AUtimh = AUtimh * 1.496 * (10^11)
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}A.U. σε m = {AUtimh:.4e} m{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==2:
+        AUtimh = AUtimh * 1.496 * (10^8)
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}A.U. σε km = {AUtimh:.4e} km {END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==3:
+        AUtimh = AUtimh * 1.581 * (10*(-5))
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}A.U. σε l.y. = {AUtimh:.4e} A.U.{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp==4:
+        AUtimh = AUtimh * 4.84814 * (10^(-6))
+        print(f"\n{YELLOW}▶ Αποτέλεσμα:{END}")
+        print(f"{BOLD}l.y. σε pc = {AUtimh:.4e} pc{END}")
+        input(f"{BOLD}Πάτα Enter για επιστροφή...{END}")
+        metatropes()
+    elif inp ==5:
+        main()
+
+
+
+
+
+
+
+
+
+
+
+
 def feugw():
-    print(f"\n{BOLD}{YELLOW}Ευχαριστούμε που χρησιμοποιήσατε το STARCALATOR!{END}")
+    print(f"\n{BOLD}{YELLOW}Ευχαριστούμε που χρησιμοποιήσατε το STARCULATOR!{END}")
     print(f"{RED}Κλείσιμο σε 2 δευτερόλεπτα...{END}")
     time.sleep(2)
     sys.exit() # Πιο κομψός τρόπος για έξοδο
